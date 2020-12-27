@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.NotesPage" 
+             Title="Notes">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="OnNotesAdded_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="listView_Notes" Margin="20" 
+              ItemSelected="listView_Notes_ItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Text}" Detail="{Binding Date}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
